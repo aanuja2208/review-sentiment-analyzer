@@ -33,3 +33,35 @@ This project implements a complete Natural Language Processing (NLP) pipeline fo
 <pre> ```text review-sentiment-analyzer/ ├── 1_clean_data.py # Cleans raw dataset, filters reviews, converts timestamps ├── 2_sentiment_and_topics.py # Applies VADER sentiment and keyword extraction ├── visualize_results.py # Creates a multi-panel Matplotlib report ├── detailed_review_report.png # Final output dashboard image ├── sentiment_distribution.png # Supporting sentiment distribution chart ├── cleaned_reviews.csv # Output from Step 1 (excluded from repo) ├── analyzed_reviews.csv # Output from Step 2 (excluded from repo) ├── README.md ``` </pre>
 
 ---
+
+## Screenshots
+
+### 1. Raw Review Input Table
+
+This is a preview of the original data before any cleaning or processing.
+
+<p align="center">
+  <img src="screenshots/raw_reviews_table.png" width="700" alt="Raw Review Table">
+</p>
+
+---
+
+### 2. Sentiment-Tagged Output
+
+Output after applying VADER sentiment analysis, including sentiment labels and compound scores.
+
+<p align="center">
+  <img src="screenshots/analyzed_reviews_table.png" width="700" alt="Analyzed Sentiment Table">
+</p>
+
+---
+
+### 3. Final Dashboard Visualization
+
+Six-panel summary comparing star ratings, sentiment labels, keyword trends, and time-series analysis.
+
+<p align="center">
+  <img src="screenshots/dashboard_summary.png" width="800" alt="Sentiment Dashboard Summary">
+</p>
+
+---
