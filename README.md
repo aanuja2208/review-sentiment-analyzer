@@ -1,5 +1,4 @@
 # review-sentiment-analyzer
-End-to-end NLP pipeline using VADER + TF-IDF with Matplotlib visualizations
 An end-to-end sentiment analysis pipeline built for large-scale product review datasets (50,000+ entries), combining natural language processing with interactive visualizations to uncover meaningful customer insights.
 
 Highlights:
