@@ -1,10 +1,40 @@
 # review-sentiment-analyzer
-An end-to-end sentiment analysis pipeline built for large-scale product review datasets (50,000+ entries), combining natural language processing with interactive visualizations to uncover meaningful customer insights.
+# Review Sentiment Analyzer
 
-Highlights:
-1. Automated sentiment tagging using the VADER model on real-world review text, achieving over 90% classification coverage
-2. TF-IDF-based keyword extraction to identify the most frequent and impactful customer concerns and product features
-3. Data cleaning, deduplication, and timestamp conversion built into a modular Python workflow
-4. 6-panel analytics dashboard built in Matplotlib, comparing star ratings with VADER sentiment trends over time
-5. Revealed a 25% mismatch between written sentiment and numeric ratings — demonstrating the value of NLP in user experience analysis
-6. Designed for full offline reproducibility using 3 clean Python scripts: data cleaning, sentiment modeling, and report generation
+This project implements a complete Natural Language Processing (NLP) pipeline for large-scale product review analysis. It processes over 50,000 customer reviews to extract sentiment information using the VADER model and identify the most prominent keywords through TF-IDF vectorization. The final results are visualized in a multi-panel Matplotlib dashboard that compares numeric star ratings with textual sentiment scores, highlighting mismatches and trends over time.
+
+---
+
+## Project Overview
+
+- **Data Size**: 50,000+ product reviews
+- **Tech Stack**: Python, Pandas, NLTK, Scikit-learn, Matplotlib
+- **Approach**: Modular pipeline for data preprocessing, sentiment analysis, keyword extraction, and visual analytics
+- **Result**: Identified a 25% mismatch between user ratings and textual sentiment, emphasizing the importance of contextual NLP over numeric scores alone
+
+---
+
+## Key Features
+
+- Cleans and preprocesses large-scale review data (timestamp conversion, deduplication, score filtering)
+- Implements VADER sentiment analysis to classify reviews as Positive, Neutral, or Negative
+- Extracts the top 15 most informative keywords using TF-IDF with custom tokenization
+- Generates a visual report with six subplots:
+  - Distribution of 1–5 star ratings
+  - Star-based sentiment percentage breakdown
+  - VADER-based sentiment percentage breakdown
+  - Top keywords ranked by TF-IDF score
+  - Rolling average trends of both rating and VADER sentiment over time
+- Fully offline, reproducible, and designed for scalability
+
+---
+
+## Repository Structure
+├── 1_clean_data.py # Cleans raw dataset, filters reviews, converts timestamps
+├── 2_sentiment_and_topics.py # Applies VADER sentiment and keyword extraction
+├── visualize_results.py # Creates a multi-panel Matplotlib report
+├── detailed_review_report.png # Final output dashboard image
+├── sentiment_distribution.png # Supporting sentiment distribution chart
+├── cleaned_reviews.csv # Output from Step 1 (excluded from repo)
+├── analyzed_reviews.csv # Output from Step 2 (excluded from repo)
+├── README.md
